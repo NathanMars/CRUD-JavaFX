@@ -1,52 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="devtests.crud.MenuController">
    <children>
-      <SplitPane dividerPositions="0.29797979797979796" layoutX="111.0" layoutY="72.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="141.0" SplitPane.resizableWithParent="false">
-               <children>
-                  <JFXButton fx:id="logoutButton" layoutX="45.0" layoutY="321.0" onAction="#userLogout" prefHeight="43.0" prefWidth="103.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Sair">
-                     <font>
-                        <Font name="Yu Gothic UI Bold" size="18.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton layoutX="-6.0" layoutY="130.0" prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Acervo">
-                     <font>
-                        <Font name="Yu Gothic UI Bold" size="18.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton layoutX="-6.0" layoutY="174.0" prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Emprestimos">
-                     <font>
-                        <Font name="Yu Gothic UI Bold" size="18.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton layoutX="-6.0" layoutY="218.0" prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Leitores">
-                     <font>
-                        <Font name="Yu Gothic UI Bold" size="18.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton layoutX="-7.0" layoutY="262.0" prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Configurações">
-                     <font>
-                        <Font name="Yu Gothic UI Bold" size="18.0" />
-                     </font>
-                  </JFXButton>
-                  <ImageView fitHeight="131.0" fitWidth="262.0" layoutX="-6.0" pickOnBounds="true" smooth="false">
-                     <image>
-                        <Image url="@../assets/login-background.jpg" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false" />
-        </items>
-      </SplitPane>
+      <VBox prefHeight="400.0" prefWidth="185.0">
+         <children>
+            <JFXButton prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Livros">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Emprestimos">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Leitores">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Configurações">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="logoutButton" onAction="#userLogout" prefHeight="43.0" prefWidth="311.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Sair">
+               <font>
+                  <Font name="Yu Gothic UI Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" top="6.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
