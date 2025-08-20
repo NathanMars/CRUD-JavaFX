@@ -1,5 +1,6 @@
-package devtests.crud;
+package Controllers;
 
+import devtests.crud.Main;
 import javafx.fxml.FXML;
 import java.io.IOException;
 import javafx.scene.control.TextField;

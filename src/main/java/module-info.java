@@ -14,5 +14,8 @@ module devtests.crud {
     requires com.almasb.fxgl.all;
 
     opens devtests.crud to javafx.fxml;
+    opens Controllers to javafx.fxml;
+
     exports devtests.crud;
+    exports Controllers;
 }

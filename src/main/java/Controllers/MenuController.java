@@ -1,5 +1,6 @@
-package devtests.crud;
+package Controllers;
 
+import devtests.crud.Main;
 import javafx.event.ActionEvent;
 import java.io.IOException;
 import javafx.fxml.FXML;
