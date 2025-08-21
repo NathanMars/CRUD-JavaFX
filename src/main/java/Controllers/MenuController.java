@@ -38,15 +38,15 @@ public class MenuController {
             menuDrawer.close();
 
             TranslateTransition transition = new TranslateTransition(Duration.millis(350), menuButton);
-            transition.setToX(10);  // posição final em X
-            transition.setToY(25);  // posição final em Y
-            transition.setInterpolator(Interpolator.LINEAR); // movimento linear
+            transition.setToX(10);
+            transition.setToY(25);
+            transition.setInterpolator(Interpolator.LINEAR); 
             transition.play();
         } else {
             menuDrawer.open();
 
             TranslateTransition transition = new TranslateTransition(Duration.millis(400), menuButton);
-            transition.setToX(210);
+            transition.setToX(215);
             transition.setToY(25);
             transition.setInterpolator(Interpolator.LINEAR);
             transition.play();
