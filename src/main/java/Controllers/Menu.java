@@ -16,7 +16,7 @@ import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 
-public class MenuController {
+public class Menu {
     @FXML
     private JFXHamburger menuButton;
 

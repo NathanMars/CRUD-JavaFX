@@ -4,7 +4,7 @@
 <?import com.jfoenix.controls.JFXHamburger?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Menu">
    <children>
       <JFXDrawer fx:id="menuDrawer" defaultDrawerSize="205.0" layoutX="-6.0" layoutY="-3.0" prefHeight="800.0" prefWidth="205.0" />
       <JFXHamburger fx:id="menuButton" layoutX="0.0" layoutY="0.0" translateX="10.0" translateY="25.0" onMouseClicked="#menuClick" stylesheets="@../Styles/stylesheet.css" />

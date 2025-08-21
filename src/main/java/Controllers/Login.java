@@ -7,11 +7,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.animation.PauseTransition;
 import javafx.util.Duration;
 
-public class LoginController {
+public class Login {
     @FXML
     private TextField username;
     @FXML
@@ -24,6 +25,23 @@ public class LoginController {
     @FXML
     protected void userLogin() throws IOException {
         authLogin();
+    }
+
+
+    @FXML
+    private void initialize() {
+
+        username.setOnKeyPressed(event ->{
+            if (event.getCode() == KeyCode.ENTER){
+                loginButton.fire();
+            }
+        });
+
+        password.setOnKeyPressed(event ->{
+            if (event.getCode() == KeyCode.ENTER){
+                loginButton.fire();
+            }
+        });
     }
 
     private void authLogin() throws IOException {
