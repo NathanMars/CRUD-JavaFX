@@ -30,7 +30,7 @@ public class LoginController {
         if (username.getText().equals("nmarques") && password.getText().equals("Teste")) {
             showWarning("Login feito com sucesso!", Color.WHITE);
             Main app = new Main();
-            app.changeScene("/View/Menu.fxml");
+            app.changeScene("/View/Menu.fxml", 1200, 800, "Biblioteca");
         } else {
             showWarning("Usuário não identificado!", Color.RED);
         }

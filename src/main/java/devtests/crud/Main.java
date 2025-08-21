@@ -24,9 +24,14 @@ public class Main extends javafx.application.Application {
         primarystage.show();
     }
 
-    public void changeScene(String fxml) throws IOException {
-        Parent scene = FXMLLoader.load(getClass().getResource(fxml));
-        stage.getScene().setRoot(scene);
+    public void changeScene(String fxml, int width, int height, String title) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxml));
+        Scene scene = new Scene(fxmlLoader.load(), width, height);
+        stage.setResizable(false);
+        stage.setTitle(title);
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.show();
     }
 
     public static void main(String[] args) {
