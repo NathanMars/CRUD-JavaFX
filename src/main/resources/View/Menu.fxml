@@ -1,56 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuController">
    <children>
-      <VBox prefHeight="400.0" prefWidth="185.0">
-         <children>
-            <JFXButton prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Livros">
-               <font>
-                  <Font name="Yu Gothic UI Bold" size="18.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="3.0" />
-               </VBox.margin>
-            </JFXButton>
-            <JFXButton prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Emprestimos">
-               <font>
-                  <Font name="Yu Gothic UI Bold" size="18.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="3.0" />
-               </VBox.margin>
-            </JFXButton>
-            <JFXButton prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Leitores">
-               <font>
-                  <Font name="Yu Gothic UI Bold" size="18.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="3.0" />
-               </VBox.margin>
-            </JFXButton>
-            <JFXButton prefHeight="43.0" prefWidth="190.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Configurações">
-               <font>
-                  <Font name="Yu Gothic UI Bold" size="18.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="3.0" />
-               </VBox.margin>
-            </JFXButton>
-            <JFXButton fx:id="logoutButton" onAction="#userLogout" prefHeight="43.0" prefWidth="311.0" style="-fx-background-color: #0D47A1;" styleClass="jfx-button" stylesheets="@../Styles/stylesheet.css" text="Sair">
-               <font>
-                  <Font name="Yu Gothic UI Bold" size="18.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="3.0" top="6.0" />
-               </VBox.margin>
-            </JFXButton>
-         </children>
-      </VBox>
+      <JFXDrawer fx:id="menuDrawer" defaultDrawerSize="205.0" layoutX="-6.0" layoutY="-3.0" prefHeight="800.0" prefWidth="205.0" />
+      <JFXHamburger fx:id="menuButton" layoutX="0.0" layoutY="0.0" translateX="10.0" translateY="25.0" onMouseClicked="#menuClick" stylesheets="@../Styles/stylesheet.css" />
    </children>
 </AnchorPane>
