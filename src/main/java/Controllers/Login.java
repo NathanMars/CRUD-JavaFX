@@ -23,12 +23,6 @@ public class Login {
     private Label warningLabel;
 
     @FXML
-    protected void userLogin() throws IOException {
-        authLogin();
-    }
-
-
-    @FXML
     private void initialize() {
 
         username.setOnKeyPressed(event ->{
@@ -44,11 +38,12 @@ public class Login {
         });
     }
 
+    @FXML
     private void authLogin() throws IOException {
         if (username.getText().equals("nmarques") && password.getText().equals("Teste")) {
             showWarning("Login feito com sucesso!", Color.WHITE);
             Main app = new Main();
-            app.changeScene("/View/Menu.fxml", 1200, 800, "Biblioteca");
+            app.changeScene("/View/Menu.fxml", 1000, 700, "Biblioteca");
         } else {
             showWarning("Usuário não identificado!", Color.RED);
         }

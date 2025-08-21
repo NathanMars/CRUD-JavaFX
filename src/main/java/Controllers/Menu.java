@@ -21,41 +21,45 @@ public class Menu {
     private JFXHamburger menuButton;
 
     @FXML
-    private JFXDrawer menuDrawer;
-
-    @FXML
-    private VBox sidepane;
+    private VBox sideMenu;
 
     @FXML
     private JFXButton logoutButton;
 
+    private Boolean menuisOpen = true;
+
+
     @FXML
     void menuClick(MouseEvent event) throws IOException {
+        if (menuisOpen) {
+            TranslateTransition menuClose = new TranslateTransition(Duration.millis(350), sideMenu);
+            menuClose.setToX(-210);
+            menuClose.setToY(0);
+            menuClose.setInterpolator(Interpolator.LINEAR);
+            menuClose.play();
 
-        loadSideMenu();
+            TranslateTransition menuButtonClose = new TranslateTransition(Duration.millis(350), menuButton);
+            menuButtonClose.setToX(10);
+            menuButtonClose.setToY(25);
+            menuButtonClose.setInterpolator(Interpolator.LINEAR);
+            menuButtonClose.play();
 
-        if (menuDrawer.isOpened()) {
-            menuDrawer.close();
-
-            TranslateTransition transition = new TranslateTransition(Duration.millis(350), menuButton);
-            transition.setToX(10);
-            transition.setToY(25);
-            transition.setInterpolator(Interpolator.LINEAR); 
-            transition.play();
+            menuisOpen = false;
         } else {
-            menuDrawer.open();
+            TranslateTransition menuOpen = new TranslateTransition(Duration.millis(400), sideMenu);
+            menuOpen.setToX(0);
+            menuOpen.setToY(0);
+            menuOpen.setInterpolator(Interpolator.LINEAR);
+            menuOpen.play();
 
-            TranslateTransition transition = new TranslateTransition(Duration.millis(400), menuButton);
-            transition.setToX(215);
-            transition.setToY(25);
-            transition.setInterpolator(Interpolator.LINEAR);
-            transition.play();
+            TranslateTransition menuButtonOpen = new TranslateTransition(Duration.millis(400), menuButton);
+            menuButtonOpen.setToX(215);
+            menuButtonOpen.setToY(25);
+            menuButtonOpen.setInterpolator(Interpolator.LINEAR);
+            menuButtonOpen.play();
+
+            menuisOpen = true;
         }
-    }
-
-    public void loadSideMenu() throws IOException {
-        sidepane = FXMLLoader.load(getClass().getResource("/View/SideMenu.fxml"));
-        menuDrawer.setSidePane(sidepane);
     }
 
     public void userLogout(ActionEvent event) throws IOException {

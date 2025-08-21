@@ -1,12 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Menu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Menu">
    <children>
-      <JFXDrawer fx:id="menuDrawer" defaultDrawerSize="205.0" layoutX="-6.0" layoutY="-3.0" prefHeight="800.0" prefWidth="205.0" />
-      <JFXHamburger fx:id="menuButton" layoutX="0.0" layoutY="0.0" translateX="10.0" translateY="25.0" onMouseClicked="#menuClick" stylesheets="@../Styles/stylesheet.css" />
+      <VBox fx:id="sideMenu" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="205.0" style="-fx-background-color: BLACK;">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="206.0" fitWidth="236.0" layoutX="1.0" layoutY="-21.0" pickOnBounds="true" rotate="-90.0" smooth="false">
+                     <image>
+                        <Image url="@../assets/login-background.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="55.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblioteca" textAlignment="CENTER" wrappingWidth="128.0">
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="booksButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Acervo">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="regsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Cadastros">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="borrowButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Empréstimos">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="optionsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Opções">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="logoutButton" alignment="CENTER" onAction="#userLogout" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Sair">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" top="3.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <JFXHamburger fx:id="menuButton" layoutX="0.0" layoutY="0.0" translateX="215.0" translateY="15.0" onMouseClicked="#menuClick" stylesheets="@../Styles/stylesheet.css" />
    </children>
 </AnchorPane>
