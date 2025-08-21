@@ -25,7 +25,7 @@
             </Text>
          </children>
       </AnchorPane>
-      <JFXButton alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Acervo">
+      <JFXButton fx:id="booksButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Acervo">
          <font>
             <Font name="Yu Gothic UI Regular" size="16.0" />
          </font>
@@ -33,7 +33,7 @@
             <Insets bottom="3.0" />
          </VBox.margin>
       </JFXButton>
-      <JFXButton alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Cadastros">
+      <JFXButton fx:id="regsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Cadastros">
          <font>
             <Font name="Yu Gothic UI Regular" size="16.0" />
          </font>
@@ -41,7 +41,7 @@
             <Insets bottom="3.0" />
          </VBox.margin>
       </JFXButton>
-      <JFXButton alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Empréstimos">
+      <JFXButton fx:id="borrowButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Empréstimos">
          <font>
             <Font name="Yu Gothic UI Regular" size="16.0" />
          </font>
@@ -49,7 +49,7 @@
             <Insets bottom="3.0" />
          </VBox.margin>
       </JFXButton>
-      <JFXButton alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Opções">
+      <JFXButton fx:id="optionsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Opções">
          <font>
             <Font name="Yu Gothic UI Regular" size="16.0" />
          </font>
