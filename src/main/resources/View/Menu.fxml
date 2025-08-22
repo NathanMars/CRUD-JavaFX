@@ -7,11 +7,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Menu">
    <children>
+      <Circle fx:id="menuButtonBackdrop" styleClass="menuButtonBack" fill="#162636" layoutX="0" layoutY="0" onMouseClicked="#menuClick" radius="34.0" stroke="BLACK" strokeType="INSIDE" translateX="225.0" translateY="20.0" />
       <VBox fx:id="sideMenu" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="205.0" style="-fx-background-color: BLACK;">
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
@@ -70,6 +72,6 @@
             </JFXButton>
          </children>
       </VBox>
-      <JFXHamburger fx:id="menuButton" layoutX="0.0" layoutY="0.0" translateX="215.0" translateY="15.0" onMouseClicked="#menuClick" stylesheets="@../Styles/stylesheet.css" />
+      <JFXHamburger fx:id="menuButton" layoutX="0" layoutY="0" onMouseClicked="#menuClick" stylesheets="@../Styles/stylesheet.css" translateX="215.0" translateY="15.0" />
    </children>
 </AnchorPane>

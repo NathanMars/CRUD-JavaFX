@@ -1,10 +1,23 @@
 .jfx-button {
-    -fx-background-color: #1565C0;
+    -fx-background-color: #0D47A1;
     -fx-text-fill: white;
 }
 
 .jfx-button:hover{
-    -fx-background-color: #1976D2;
+    -fx-background-color: #1565C0;
+     -fx-scale-x: 1.1;
+     -fx-scale-y: 1.1;
+    -fx-cursor: hand;
 }
 
 .jfx-hamburger StackPane { -fx-background-color: white; }
+
+.jfx-hamburger:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-cursor: hand;
+}
+
+.menuButtonBack:hover {
+    -fx-fill: #424242;
+}
