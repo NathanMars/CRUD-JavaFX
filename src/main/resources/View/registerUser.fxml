@@ -41,7 +41,7 @@
          </font>
       </Label>
       <ComboBox layoutX="659.0" layoutY="398.0" prefHeight="36.0" prefWidth="117.0" />
-      <Label alignment="CENTER" layoutX="662.0" layoutY="35.0" prefHeight="35.0" prefWidth="268.0" text="CADASTRAR USUÁRIOS">
+      <Label alignment="CENTER" layoutX="608.0" layoutY="35.0" prefHeight="35.0" prefWidth="316.0" text="CADASTRAR USUÁRIOS">
          <font>
             <Font name="Yu Gothic UI Bold" size="24.0" />
          </font>
