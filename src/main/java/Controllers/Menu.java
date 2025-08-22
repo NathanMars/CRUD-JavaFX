@@ -7,7 +7,6 @@ import java.io.IOException;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.controls.JFXButton;
 
@@ -170,12 +169,12 @@ public class Menu {
 
     @FXML
     void registerUserButtonClick(ActionEvent event) {
-        loadContent("/View/Acervo.fxml");
+        loadContent("/View/registerUser.fxml");
     }
 
     @FXML
     void registerAdminClick(ActionEvent event) {
-        loadContent("/View/Admins.fxml");
+        loadContent("/View/registerAdmins.fxml");
     }
 
     public void userLogout(ActionEvent event) throws IOException {
