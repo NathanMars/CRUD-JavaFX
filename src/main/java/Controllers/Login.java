@@ -1,6 +1,7 @@
 package Controllers;
 
 import devtests.crud.Main;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import java.io.IOException;
 import javafx.scene.control.TextField;
@@ -36,6 +37,8 @@ public class Login {
                 loginButton.fire();
             }
         });
+
+        Platform.runLater(() -> username.requestFocus());
     }
 
     @FXML

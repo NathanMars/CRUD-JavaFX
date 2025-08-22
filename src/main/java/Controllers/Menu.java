@@ -52,6 +52,10 @@ public class Menu {
         submenu.setPrefHeight(0);
 
         registerButton.setOnAction(e -> toggleSubmenu());
+
+        javafx.application.Platform.runLater(() -> {
+            contentPane.requestFocus();
+        });
     }
 
     private void toggleSubmenu() {
@@ -69,7 +73,7 @@ public class Menu {
         double targetHeight = 126; // altura total (igual ao FXML)
         Timeline expand = new Timeline(
                 new KeyFrame(Duration.millis(350),
-                        new KeyValue(submenu.prefHeightProperty(), targetHeight, Interpolator.EASE_BOTH))
+                        new KeyValue(submenu.prefHeightProperty(), targetHeight, Interpolator.LINEAR))
         );
         expand.play();
     }
@@ -77,7 +81,7 @@ public class Menu {
     private void collapseSubmenu() {
         Timeline collapse = new Timeline(
                 new KeyFrame(Duration.millis(350),
-                        new KeyValue(submenu.prefHeightProperty(), 0, Interpolator.EASE_BOTH))
+                        new KeyValue(submenu.prefHeightProperty(), 0, Interpolator.LINEAR))
         );
 
         collapse.setOnFinished(e -> {
