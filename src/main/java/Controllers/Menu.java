@@ -1,6 +1,7 @@
 package Controllers;
 
 import devtests.crud.Main;
+import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
@@ -14,8 +15,10 @@ import com.jfoenix.controls.JFXButton;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
+import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
@@ -33,6 +36,9 @@ public class Menu {
 
     @FXML
     private JFXButton logoutButton;
+
+    @FXML
+    private AnchorPane contentPane;
 
     private Boolean menuisOpen = true;
 
@@ -117,8 +123,34 @@ public class Menu {
         menuButton.setOnMouseExited(onExit);
     }
 
+    @FXML
+    void AcervoClick(ActionEvent event) {
+        loadContent("/View/Acervo.fxml");
+    }
+
+    @FXML
+    void CadastrosClick(ActionEvent event) {
+        loadContent("/View/Admins.fxml");
+    }
+
     public void userLogout(ActionEvent event) throws IOException {
         Main app = new Main();
         app.changeScene("/View/Login.fxml", 600, 400, "Login");
+    }
+
+    private void loadContent(String fxmlPath) {
+        try {
+
+            Node node = FXMLLoader.load(getClass().getResource(fxmlPath));
+            FadeTransition ft = new FadeTransition(Duration.millis(200), node);
+            ft.setFromValue(0);
+            ft.setToValue(1);
+            contentPane.getChildren().clear();
+            contentPane.getChildren().add(node);
+            ft.play();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
