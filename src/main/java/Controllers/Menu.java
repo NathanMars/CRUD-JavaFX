@@ -1,9 +1,7 @@
 package Controllers;
 
 import devtests.crud.Main;
-import javafx.animation.FadeTransition;
-import javafx.animation.Interpolator;
-import javafx.animation.TranslateTransition;
+import javafx.animation.*;
 import javafx.event.ActionEvent;
 import java.io.IOException;
 
@@ -35,16 +33,59 @@ public class Menu {
     private VBox sideMenu;
 
     @FXML
-    private JFXButton logoutButton;
+    private AnchorPane contentPane;
 
     @FXML
-    private AnchorPane contentPane;
+    private VBox submenu;
+
+    @FXML
+    private JFXButton registerButton;
 
     private Boolean menuisOpen = true;
 
     @FXML
     private void initialize() {
         setupMenuHoverEffects();
+
+        submenu.setVisible(false);
+        submenu.setManaged(false);
+        submenu.setPrefHeight(0);
+
+        registerButton.setOnAction(e -> toggleSubmenu());
+    }
+
+    private void toggleSubmenu() {
+        if (submenu.isVisible()) {
+            collapseSubmenu();
+        } else {
+            expandSubmenu();
+        }
+    }
+
+    private void expandSubmenu() {
+        submenu.setVisible(true);
+        submenu.setManaged(true);
+
+        double targetHeight = 126; // altura total (igual ao FXML)
+        Timeline expand = new Timeline(
+                new KeyFrame(Duration.millis(350),
+                        new KeyValue(submenu.prefHeightProperty(), targetHeight, Interpolator.EASE_BOTH))
+        );
+        expand.play();
+    }
+
+    private void collapseSubmenu() {
+        Timeline collapse = new Timeline(
+                new KeyFrame(Duration.millis(350),
+                        new KeyValue(submenu.prefHeightProperty(), 0, Interpolator.EASE_BOTH))
+        );
+
+        collapse.setOnFinished(e -> {
+            submenu.setVisible(false);
+            submenu.setManaged(false);
+        });
+
+        collapse.play();
     }
 
     @FXML
@@ -124,12 +165,12 @@ public class Menu {
     }
 
     @FXML
-    void AcervoClick(ActionEvent event) {
+    void registerUserButtonClick(ActionEvent event) {
         loadContent("/View/Acervo.fxml");
     }
 
     @FXML
-    void CadastrosClick(ActionEvent event) {
+    void registerAdminClick(ActionEvent event) {
         loadContent("/View/Admins.fxml");
     }
 

@@ -31,7 +31,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <JFXButton fx:id="booksButton" alignment="CENTER" onAction="#AcervoClick" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Acervo">
+            <JFXButton fx:id="registerButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Cadastrar">
                <font>
                   <Font name="Yu Gothic UI Regular" size="16.0" />
                </font>
@@ -39,7 +39,26 @@
                   <Insets bottom="3.0" />
                </VBox.margin>
             </JFXButton>
-            <JFXButton fx:id="regsButton" alignment="CENTER" onAction="#CadastrosClick" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Cadastros">
+            <VBox fx:id="submenu" alignment="TOP_CENTER" prefHeight="126.0" prefWidth="205.0">
+               <children>
+                  <JFXButton fx:id="registerUserButton" onAction="#registerUserButtonClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../Styles/stylesheet.css" text="Usuários">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../Styles/stylesheet.css" text="Eventos">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="registerAdmin" onAction="#registerAdminClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../Styles/stylesheet.css" text="Administradores">
+                     <VBox.margin>
+                        <Insets bottom="4.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <JFXButton fx:id="regsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Cadastros">
                <font>
                   <Font name="Yu Gothic UI Regular" size="16.0" />
                </font>
@@ -47,7 +66,7 @@
                   <Insets bottom="3.0" />
                </VBox.margin>
             </JFXButton>
-            <JFXButton fx:id="borrowButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Empréstimos">
+            <JFXButton fx:id="reportsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Relatórios">
                <font>
                   <Font name="Yu Gothic UI Regular" size="16.0" />
                </font>

@@ -4,9 +4,21 @@
 }
 
 .jfx-button:hover{
-    -fx-background-color: #1565C0;
+    -fx-background-color: #1976D2;
      -fx-scale-x: 1.1;
      -fx-scale-y: 1.1;
+    -fx-cursor: hand;
+}
+
+.submenu-button {
+    -fx-background-color: #1565C0;
+    -fx-text-fill: white;
+}
+
+.submenu-button:hover{
+    -fx-background-color: #1976D2;
+     -fx-scale-x: 1.05;
+     -fx-scale-y: 1.05;
     -fx-cursor: hand;
 }
 
