@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Configuração de conexão com PostgreSQL -->
+        <property name="hibernate.connection.driver_class"></property>
+        <property name="hibernate.connection.url"></property>
+        <property name="hibernate.connection.username"></property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- Dialeto para PostgreSQL -->
+        <property name="hibernate.dialect"></property>
+
+        <!-- Mostrar as queries no console -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Hibernate será apenas capaz de comandos como SELECT, UPDATE, DELETE -->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+
+        <!-- Mapeamento de entidades -->
+        <mapping class="Model.Manager"/>
+        <mapping class="Model.User"/>
+
+    </session-factory>
+</hibernate-configuration>
