@@ -29,11 +29,11 @@
                <font>
                   <Font name="Yu Gothic UI Regular" size="18.0" />
                </font></Button>
-            <TextField fx:id="username" layoutX="81.0" layoutY="126.0" prefHeight="36.0" prefWidth="190.0">
+            <TextField fx:id="Username" layoutX="81.0" layoutY="126.0" prefHeight="36.0" prefWidth="190.0">
                <font>
                   <Font name="Yu Gothic UI Regular" size="14.0" />
                </font></TextField>
-            <PasswordField fx:id="password" layoutX="83.0" layoutY="239.0" prefHeight="36.0" prefWidth="188.0">
+            <PasswordField fx:id="Password" layoutX="83.0" layoutY="239.0" prefHeight="36.0" prefWidth="188.0">
                <font>
                   <Font name="Yu Gothic UI Regular" size="11.0" />
                </font></PasswordField>

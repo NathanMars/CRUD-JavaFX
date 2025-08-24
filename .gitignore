@@ -2,7 +2,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-src\main\resources\Tool\hibernate.cfg.xml
+src\main\resources\hibernate.cfg.xml
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -37,4 +37,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
-src/main/resources/Tool/hibernate.cfg.xml
+src/main/resources/hibernate.cfg.xml

@@ -4,6 +4,9 @@ import devtests.crud.Main;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import java.io.IOException;
+
+import DAO.AdminDAO;
+import Model.Admin;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Button;
@@ -15,35 +18,41 @@ import javafx.util.Duration;
 
 public class Login {
     @FXML
-    private TextField username;
+    private TextField Username;
     @FXML
-    private PasswordField password;
+    private PasswordField Password;
     @FXML
     private Button loginButton;
     @FXML
     private Label warningLabel;
 
+    private final AdminDAO adminDAO = new AdminDAO();
+
     @FXML
     private void initialize() {
 
-        username.setOnKeyPressed(event ->{
+        Username.setOnKeyPressed(event ->{
             if (event.getCode() == KeyCode.ENTER){
                 loginButton.fire();
             }
         });
 
-        password.setOnKeyPressed(event ->{
+        Password.setOnKeyPressed(event ->{
             if (event.getCode() == KeyCode.ENTER){
                 loginButton.fire();
             }
         });
 
-        Platform.runLater(() -> username.requestFocus());
+        Platform.runLater(() -> Username.requestFocus());
     }
 
     @FXML
     private void authLogin() throws IOException {
-        if (username.getText().equals("nmarques") && password.getText().equals("Teste")) {
+        String username = Username.getText();
+        String password = Password.getText();
+        Admin admin = adminDAO.authenticate(username, password);
+
+        if (admin != null) {
             showWarning("Login feito com sucesso!", Color.WHITE);
             Main app = new Main();
             app.changeScene("/View/Menu.fxml", 1000, 700, "Biblioteca");
