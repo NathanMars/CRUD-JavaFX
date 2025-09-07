@@ -169,12 +169,12 @@ public class Menu {
 
     @FXML
     void registerUserButtonClick(ActionEvent event) {
-        loadContent("/View/registerUser.fxml");
+        loadContent("/View/Register/registerUser.fxml");
     }
 
     @FXML
     void registerAdminClick(ActionEvent event) {
-        loadContent("/View/registerAdmins.fxml");
+        loadContent("/View/Register/registerAdmins.fxml");
     }
 
     public void userLogout(ActionEvent event) throws IOException {
