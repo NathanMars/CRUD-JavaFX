@@ -33,16 +33,19 @@ public class Admin {
     )
     private String password;
 
+    /*
     @Column(
             name = "\"NOME\"",
             nullable = false
     )
     private String name;
 
+
     @Column(
             name = "\"ULTIMO_ACESSO\""
     )
     private LocalDateTime lastAccess;
+    */
 
     public void setId(Integer id) {
         this.id = id;
