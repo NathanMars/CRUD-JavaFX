@@ -1,7 +1,6 @@
 package Model;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -29,9 +28,21 @@ public class Admin {
 
    
     @Column(
-            name = "\"SENHA\""
+            name = "\"SENHA\"",
+            nullable = false
     )
     private String password;
+
+    @Column(
+            name = "\"NOME\"",
+            nullable = false
+    )
+    private String name;
+
+    @Column(
+            name = "\"ULTIMO_ACESSO\""
+    )
+    private LocalDateTime lastAccess;
 
     public void setId(Integer id) {
         this.id = id;
