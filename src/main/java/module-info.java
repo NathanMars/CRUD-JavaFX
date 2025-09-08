@@ -1,4 +1,4 @@
-module devtests.crud {
+module Application.crud {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -15,14 +15,17 @@ module devtests.crud {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires jbcrypt;
 
-    opens devtests.crud to javafx.fxml;
-    opens Controllers to javafx.fxml;
-    opens Model to javafx.base, org.hibernate.orm.core;
+    opens Application to javafx.fxml;
+    opens Controllers.General to javafx.fxml;
+    opens Controllers.Registrations to javafx.fxml;
+    opens Model.Entity to javafx.base, org.hibernate.orm.core;
     opens Connection to org.hibernate.orm.core;
 
-    exports devtests.crud;
-    exports Controllers;
+    exports Application;
+    exports Controllers.General;
     exports Controllers.Registrations;
-    opens Controllers.Registrations to javafx.fxml;
+    exports Model.Entity;
+    exports Model.DAO;
 }

@@ -23,8 +23,8 @@
         <property name="hibernate.hbm2ddl.auto">validate</property>
 
         <!-- Mapeamento de entidades -->
-        <mapping class="Model.Manager"/>
-        <mapping class="Model.User"/>
+        <mapping class="Model.Entity.User"/>
+        <mapping class="Model.Entity.Client"/>
 
     </session-factory>
 </hibernate-configuration>

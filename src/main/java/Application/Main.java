@@ -1,8 +1,7 @@
-package devtests.crud;
+package Application;
 
 import atlantafx.base.theme.PrimerDark;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -16,7 +15,7 @@ public class Main extends javafx.application.Application {
     public void start(Stage primarystage) throws IOException {
         Main.setUserAgentStylesheet(new PrimerDark().getUserAgentStylesheet());
         stage = primarystage;
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/View/Login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/View/General/Login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         primarystage.setResizable(false);
         primarystage.setTitle("Login");
