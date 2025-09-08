@@ -1,7 +1,7 @@
 package Controllers.Registrations;
 
-import DAO.UserDAO;
-import Model.User;
+import Model.DAO.UserDAO;
+import Model.Entity.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -69,7 +69,7 @@ public class UsersRegistrationsView {
                     col.setReorderable(false);
                 });
 
-        // Busca dados no DAO
+        // Busca dados no Model.DAO
         UserDAO UserDAO = new UserDAO();
         List<User> Users = UserDAO.selectUsers();
 

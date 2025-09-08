@@ -1,12 +1,11 @@
-package Controllers;
+package Controllers.General;
 
-import devtests.crud.Main;
-import javafx.application.Platform;
-import javafx.fxml.FXML;
+import Application.Main;
+import Model.DAO.UserDAO;
+import Model.Entity.User;
 import java.io.IOException;
-
-import DAO.UserDAO;
-import Model.User;
+import javafx.fxml.FXML;
+import javafx.application.Platform;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Button;
@@ -55,7 +54,7 @@ public class Login {
         if (user != null) {
             showWarning("Login feito com sucesso!", Color.WHITE);
             Main app = new Main();
-            app.changeScene("/View/Menu.fxml", 1000, 700, "Biblioteca");
+            app.changeScene("/View/General/Menu.fxml", 1000, 700, "Biblioteca");
         } else {
             showWarning("Usuário não identificado!", Color.RED);
         }

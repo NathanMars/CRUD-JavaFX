@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Menu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.General.Menu">
    <children>
       <AnchorPane fx:id="contentPane" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Circle fx:id="menuButtonBackdrop" fill="#162636" layoutX="0" layoutY="0" onMouseClicked="#menuClick" radius="34.0" stroke="BLACK" strokeType="INSIDE" styleClass="menuButtonBack" translateX="225.0" translateY="20.0" />
@@ -21,7 +21,7 @@
                <children>
                   <ImageView fitHeight="206.0" fitWidth="236.0" layoutX="1.0" layoutY="-21.0" pickOnBounds="true" rotate="-90.0" smooth="false">
                      <image>
-                        <Image url="@../assets/login-background.jpg" />
+                        <Image url="@../../assets/login-background.jpg" />
                      </image>
                   </ImageView>
                   <Text layoutX="55.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblioteca" textAlignment="CENTER" wrappingWidth="128.0">
@@ -31,7 +31,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <JFXButton fx:id="registerButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Cadastrar">
+            <JFXButton fx:id="registerButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../Styles/stylesheet.css" text="Cadastrar">
                <font>
                   <Font name="Yu Gothic UI Regular" size="16.0" />
                </font>
@@ -41,24 +41,24 @@
             </JFXButton>
             <VBox fx:id="submenu" alignment="TOP_CENTER" prefHeight="126.0" prefWidth="205.0">
                <children>
-                  <JFXButton fx:id="registerUserButton" onAction="#registerUserButtonClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../Styles/stylesheet.css" text="Usuários">
+                  <JFXButton fx:id="registerUserButton" onAction="#registerUserButtonClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Usuários">
                      <VBox.margin>
                         <Insets bottom="2.0" top="2.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../Styles/stylesheet.css" text="Eventos">
+                  <JFXButton prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Eventos">
                      <VBox.margin>
                         <Insets bottom="2.0" top="2.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="registerAdmin" onAction="#registerAdminClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../Styles/stylesheet.css" text="Administradores">
+                  <JFXButton fx:id="registerAdmin" onAction="#registerAdminClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Administradores">
                      <VBox.margin>
                         <Insets bottom="4.0" top="2.0" />
                      </VBox.margin>
                   </JFXButton>
                </children>
             </VBox>
-            <JFXButton fx:id="regsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Cadastros">
+            <JFXButton fx:id="regsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../Styles/stylesheet.css" text="Cadastros">
                <font>
                   <Font name="Yu Gothic UI Regular" size="16.0" />
                </font>
@@ -66,7 +66,7 @@
                   <Insets bottom="3.0" />
                </VBox.margin>
             </JFXButton>
-            <JFXButton fx:id="reportsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Relatórios">
+            <JFXButton fx:id="reportsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../Styles/stylesheet.css" text="Relatórios">
                <font>
                   <Font name="Yu Gothic UI Regular" size="16.0" />
                </font>
@@ -74,7 +74,7 @@
                   <Insets bottom="3.0" />
                </VBox.margin>
             </JFXButton>
-            <JFXButton fx:id="optionsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Opções">
+            <JFXButton fx:id="optionsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../Styles/stylesheet.css" text="Opções">
                <font>
                   <Font name="Yu Gothic UI Regular" size="16.0" />
                </font>
@@ -82,7 +82,7 @@
                   <Insets bottom="3.0" />
                </VBox.margin>
             </JFXButton>
-            <JFXButton fx:id="logoutButton" alignment="CENTER" onAction="#userLogout" prefHeight="40.0" prefWidth="200.0" stylesheets="@../Styles/stylesheet.css" text="Sair">
+            <JFXButton fx:id="logoutButton" alignment="CENTER" onAction="#userLogout" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../Styles/stylesheet.css" text="Sair">
                <font>
                   <Font name="Yu Gothic UI Regular" size="16.0" />
                </font>
@@ -92,6 +92,6 @@
             </JFXButton>
          </children>
       </VBox>
-      <JFXHamburger fx:id="menuButton" layoutX="0" layoutY="0" onMouseClicked="#menuClick" stylesheets="@../Styles/stylesheet.css" translateX="215.0" translateY="15.0" />
+      <JFXHamburger fx:id="menuButton" layoutX="0" layoutY="0" onMouseClicked="#menuClick" stylesheets="@../../Styles/stylesheet.css" translateX="215.0" translateY="15.0" />
    </children>
 </AnchorPane>

@@ -1,17 +1,25 @@
-package DAO;
+package Model.DAO;
 
-import Model.Client;
+import Model.Entity.Client;
 import Connection.HibernateCon;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import java.util.List;
 import java.util.ArrayList;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class ClientDAO {
 
-    public Model.Client insertClient(String name, String cpf, String email, String phone, String address
+    public List<Client> selectClients() {
+        try (Session session = HibernateCon.getSessionFactory().openSession()) {
+            return session.createQuery("FROM Client", Client.class).list();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
+
+    public Client insertClient(String name, String cpf, String email, String phone, String address
             , LocalDate birthDate, boolean active) {
 
         Transaction transaction = null;
@@ -43,14 +51,5 @@ public class ClientDAO {
         }
 
         return Client;
-    }
-
-    public List<Client> selectClients() {
-        try (Session session = HibernateCon.getSessionFactory().openSession()) {
-            return session.createQuery("FROM Client", Client.class).list();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new ArrayList<>();
-        }
     }
 }

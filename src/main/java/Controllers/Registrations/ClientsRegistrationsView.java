@@ -1,11 +1,10 @@
 package Controllers.Registrations;
 
-import DAO.ClientDAO;
-import Model.Client;
+import Model.DAO.ClientDAO;
+import Model.Entity.Client;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.ImageView;
 
 import java.util.List;
 
@@ -57,7 +56,7 @@ public class ClientsRegistrationsView {
             col.setReorderable(false);
         });
 
-        // Busca no DAO
+        // Busca no Model.DAO
         ClientDAO ClientDAO = new ClientDAO();
         List<Client> Clients = ClientDAO.selectClients();
 

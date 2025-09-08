@@ -1,6 +1,6 @@
-package Controllers;
+package Controllers.General;
 
-import devtests.crud.Main;
+import Application.Main;
 import javafx.animation.*;
 import javafx.event.ActionEvent;
 import java.io.IOException;
@@ -179,7 +179,7 @@ public class Menu {
 
     public void userLogout(ActionEvent event) throws IOException {
         Main app = new Main();
-        app.changeScene("/View/Login.fxml", 600, 400, "Login");
+        app.changeScene("/View/General/Login.fxml", 600, 400, "Login");
     }
 
     private void loadContent(String fxmlPath) {

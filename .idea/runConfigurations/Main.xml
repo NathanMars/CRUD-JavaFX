@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="devtests.crud.Main" />
+    <option name="MAIN_CLASS_NAME" value="Application.Main" />
     <module name="Teste" />
     <option name="VM_PARAMETERS" value="--enable-native-access=javafx.graphics --sun-misc-unsafe-memory-access=allow" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="devtests.crud.*" />
+        <option name="PATTERN" value="Application.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
