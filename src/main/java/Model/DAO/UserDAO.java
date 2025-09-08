@@ -49,23 +49,22 @@ public class UserDAO {
         }
     }
     
-    public User insertUser(String name, String email, String username, String password, String type, boolean active, LocalDate birthdate, String cpf) {
+    public User insertUser(String username, String password, String name, String cpf, String role, String type) {
         Transaction transaction = null;
         User user = new User();
 
         try (Session session = HibernateCon.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
 
-            //user.setName(name);
-            //user.setEmail(email);
             user.setUsername(username);
             String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
             user.setPassword(hashedPassword);
-            //user.setType(TypeManager.valueOf(type.toUpperCase()));
-            //user.setActive(active);
-            //user.setBirthDate(birthdate);
-            //user.setCpf(cpf);
-            //user.setCreation(LocalDateTime.now());
+            user.setName(name);
+            user.setCpf(cpf);
+            user.setRole(role);
+            user.setType(type.toUpperCase());
+            user.setCreationDate(LocalDateTime.now());
+            user.setActive(true);
 
             session.persist(user);
             transaction.commit();

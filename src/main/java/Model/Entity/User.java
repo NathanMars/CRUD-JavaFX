@@ -2,6 +2,8 @@ package Model.Entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
 
 @Entity
 @Table(
@@ -31,24 +33,50 @@ public class User {
     )
     private String password;
 
-    /*
+
     @Column(
             name = "\"NOME\"",
             nullable = false
     )
     private String name;
 
+    @Column(
+            name = "\"CPF\"",
+            nullable = false
+    )
+    private String cpf;
 
     @Column(
-            name = "\"ULTIMO_ACESSO\""
+            name = "\"CARGO\"",
+            nullable = false
     )
-    private LocalDateTime lastAccess;
-    */
+    private String role;
 
-    public void setId(Integer id) {
+    @Column(
+            name = "\"TIPO\"",
+            nullable = false
+    )
+    private String type;
+
+    @Column(
+            name = "\"ATIVO\"",
+            nullable = false
+    )
+    private boolean active;
+
+    @Column(
+            name = "\"DATA_CRIACAO\""
+    )
+    private LocalDateTime creationDate;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
     }
-     
+
     public String getUsername() {
         return this.username;
     }
@@ -63,6 +91,54 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public LocalDateTime getcreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(LocalDateTime creationDate) {
+        this.creationDate = creationDate;
     }
 
 }
