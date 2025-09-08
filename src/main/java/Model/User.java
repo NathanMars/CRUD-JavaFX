@@ -1,15 +1,13 @@
 package Model;
 
 import jakarta.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 
 @Entity
 @Table(
         name = "\"ADMINISTRADOR\""
 )
-public class Admin {
+public class User {
     @Id
     @GeneratedValue(
             strategy = GenerationType.IDENTITY

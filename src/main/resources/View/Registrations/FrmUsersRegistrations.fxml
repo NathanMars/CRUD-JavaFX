@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Registrations.AdministratorsRegistrationsView">
+   <children>
+      <Button fx:id="btnSave" layoutX="797.0" layoutY="709.0" onAction="#clearFields" prefHeight="25.0" prefWidth="68.0" text="Salvar" />
+      <Label layoutX="720.0" prefHeight="44.0" prefWidth="222.0" text="ADMINISTRADORES">
+         <font>
+            <Font name="Yu Gothic Light" size="22.0" />
+         </font>
+      </Label>
+       <TableView fx:id="tableAdministrators" layoutX="47.0" layoutY="96.0" prefHeight="400" prefWidth="823.0">
+           <columns>
+               <TableColumn fx:id="colId" prefWidth="50" text="ID" />
+               <TableColumn fx:id="colUsername" prefWidth="125" text="Username" />
+               <TableColumn fx:id="colName" prefWidth="280" text="Nome" />
+               <TableColumn fx:id="colCpf" prefWidth="150" text="CPF" />
+               <TableColumn fx:id="colType" prefWidth="140.0" text="Tipo" />
+               <TableColumn fx:id="colActive" prefWidth="70" text="Ativo" />
+           </columns>
+       </TableView>
+      <Label layoutX="379.0" layoutY="517.0" text="Nome:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="374.0" layoutY="540.0" prefHeight="25.0" prefWidth="402.0" />
+      <Label layoutX="379.0" layoutY="592.0" text="Email:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField" layoutX="375.0" layoutY="608.0" prefHeight="36.0" prefWidth="403.0" />
+      <Label layoutX="148.0" layoutY="659.0" text="Tipo:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="typeField" layoutX="143.0" layoutY="679.0" />
+      <Label layoutX="153.0" layoutY="518.0" text="Username:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="141.0" layoutY="537.0" />
+      <Label layoutX="658.0" layoutY="687.0" text="Ativo:">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="activeField" layoutX="696.0" layoutY="686.0" />
+      <Label layoutX="153.0" layoutY="585.0" text="Cpf:">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="377.0" layoutY="659.0" text="Nascimento">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="birthField" layoutX="375.0" layoutY="681.0" />
+      <TextField fx:id="cpfField" layoutX="142.0" layoutY="606.0" />
+   </children>
+</AnchorPane>

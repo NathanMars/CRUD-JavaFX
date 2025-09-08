@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Registrations.UsersRegistrationsView">
+   <children>
+      <Button fx:id="btnSave" layoutX="836.0" layoutY="709.0" onAction="#clearFields" prefHeight="25.0" prefWidth="68.0" text="Salvar" />
+      <Label layoutX="775.0" prefHeight="44.0" prefWidth="167.0" text="LEITORES">
+         <font>
+            <Font name="Yu Gothic Light" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableReaders" layoutX="47.0" layoutY="96.0" prefHeight="400" prefWidth="823.0">
+         <columns>
+            <TableColumn fx:id="colName" prefWidth="125" text="Nome" />
+            <TableColumn fx:id="colSurname" prefWidth="229.0" text="Sobrenome" />
+            <TableColumn fx:id="colCpf" prefWidth="175.0" text="CPF" />
+            <TableColumn fx:id="colCardNumber" prefWidth="165.0" text="Carteirinha" />
+            <TableColumn fx:id="colType" prefWidth="128.0" text="Tipo" />
+         </columns>
+      </TableView>
+      <Label layoutX="231.0" layoutY="512.0" text="Nome:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="227.0" layoutY="527.0" prefHeight="36.0" prefWidth="147.0" />
+      <Label layoutX="232.0" layoutY="576.0" text="Email:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField" layoutX="228.0" layoutY="593.0" prefHeight="36.0" prefWidth="403.0" />
+      <Label layoutX="390.0" layoutY="702.0" text="Tipo:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="typeField" layoutX="386.0" layoutY="719.0" prefHeight="36.0" prefWidth="147.0" />
+      <Label layoutX="656.0" layoutY="640.0" text="Telefone:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phoneField" layoutX="650.0" layoutY="657.0" />
+      <Label layoutX="741.0" layoutY="728.0" text="Ativo:">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="activeField" layoutX="779.0" layoutY="727.0" />
+      <Label layoutX="655.0" layoutY="512.0" text="Cpf:">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="654.0" layoutY="576.0" text="Nascimento">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="birthField" layoutX="650.0" layoutY="593.0" prefHeight="36.0" prefWidth="181.0" />
+      <TextField fx:id="cpfField" layoutX="650.0" layoutY="527.0" prefHeight="36.0" />
+      <Label layoutX="388.0" layoutY="512.0" text="Sobrenome:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="surnameField" layoutX="384.0" layoutY="527.0" prefHeight="36.0" prefWidth="246.0" />
+      <Label layoutX="232.0" layoutY="640.0" text="Endereço:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addressField" layoutX="228.0" layoutY="657.0" prefHeight="36.0" prefWidth="403.0" />
+      <Label layoutX="231.0" layoutY="703.0" text="N° da Carteirinha:">
+         <font>
+            <Font name="Yu Gothic Light" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cardNumberField" layoutX="227.0" layoutY="718.0" prefHeight="36.0" prefWidth="147.0" />
+      <ImageView fx:id="photoViewer" fitHeight="184.0" fitWidth="160.0" layoutX="48.0" layoutY="529.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Assets/profile.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="550.0" layoutY="702.0" text="Validade:">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="expirationField" editable="false" layoutX="546.0" layoutY="719.0" prefHeight="36.0" prefWidth="181.0" />
+   </children>
+</AnchorPane>

@@ -5,8 +5,8 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import java.io.IOException;
 
-import DAO.AdminDAO;
-import Model.Admin;
+import DAO.UserDAO;
+import Model.User;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Button;
@@ -26,7 +26,7 @@ public class Login {
     @FXML
     private Label warningLabel;
 
-    private final AdminDAO adminDAO = new AdminDAO();
+    private final UserDAO userDAO = new UserDAO();
 
     @FXML
     private void initialize() {
@@ -50,9 +50,9 @@ public class Login {
     private void authLogin() throws IOException {
         String username = Username.getText();
         String password = Password.getText();
-        Admin admin = adminDAO.authenticate(username, password);
+        User user = userDAO.authenticate(username, password);
 
-        if (admin != null) {
+        if (user != null) {
             showWarning("Login feito com sucesso!", Color.WHITE);
             Main app = new Main();
             app.changeScene("/View/Menu.fxml", 1000, 700, "Biblioteca");

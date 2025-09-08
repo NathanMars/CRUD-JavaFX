@@ -23,4 +23,6 @@ module devtests.crud {
 
     exports devtests.crud;
     exports Controllers;
+    exports Controllers.Registrations;
+    opens Controllers.Registrations to javafx.fxml;
 }

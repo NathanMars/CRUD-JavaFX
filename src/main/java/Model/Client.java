@@ -26,6 +26,12 @@ public class Client {
     private String name;
 
     @Column(
+            name = "\"CPF\"",
+            nullable = false
+    )
+    private String cpf;
+
+    @Column(
             name = "\"EMAIL\"",
             nullable = false
     )
@@ -36,7 +42,19 @@ public class Client {
             nullable = false
     )
     private String phone;
-   
+
+    @Column(
+            name = "\"ENDERECO\"",
+            nullable = false
+    )
+    private String address;
+
+    @Column(
+            name = "\"ATIVO\"",
+            nullable = false
+    )
+    private boolean active;
+
     @Column(
             name = "\"NASCIMENTO\""
     )
@@ -56,6 +74,22 @@ public class Client {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getEmail() {
@@ -80,5 +114,13 @@ public class Client {
 
     public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }
