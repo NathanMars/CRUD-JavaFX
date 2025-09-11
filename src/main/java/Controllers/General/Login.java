@@ -54,7 +54,7 @@ public class Login {
         if (user != null) {
             showWarning("Login feito com sucesso!", Color.WHITE);
             Main app = new Main();
-            app.changeScene("/View/General/Menu.fxml", 1000, 700, "Biblioteca");
+            app.changeScene("/View/General/Menu.fxml", 1000, 700, "Menu");
         } else {
             showWarning("Usuário não identificado!", Color.RED);
         }

@@ -35,41 +35,47 @@ public class Menu {
     private AnchorPane contentPane;
 
     @FXML
-    private VBox submenu;
+    private VBox submenuRegister;
+
+    @FXML
+    private VBox submenuRegistrations;
 
     @FXML
     private JFXButton registerButton;
 
-    private Boolean menuisOpen = true;
+    @FXML
+    private JFXButton registrationsButton;
+
+    private Boolean menuIsOpen = true;
 
     @FXML
     private void initialize() {
         setupMenuHoverEffects();
 
-        submenu.setVisible(false);
-        submenu.setManaged(false);
-        submenu.setPrefHeight(0);
+        submenuRegister.setVisible(false);
+        submenuRegister.setManaged(false);
+        submenuRegister.setPrefHeight(0);
 
-        registerButton.setOnAction(e -> toggleSubmenu());
+        registerButton.setOnAction(e -> toggleSubmenu(submenuRegister, 126));
+        registrationsButton.setOnAction(e -> toggleSubmenu(submenuRegistrations, 126));
 
         javafx.application.Platform.runLater(() -> {
             contentPane.requestFocus();
         });
     }
 
-    private void toggleSubmenu() {
+    private void toggleSubmenu(VBox submenu, double targetHeight) {
         if (submenu.isVisible()) {
-            collapseSubmenu();
+            collapseSubmenu(submenu);
         } else {
-            expandSubmenu();
+            expandSubmenu(submenu, targetHeight);
         }
     }
 
-    private void expandSubmenu() {
+    private void expandSubmenu(VBox submenu, double targetHeight) {
         submenu.setVisible(true);
         submenu.setManaged(true);
 
-        double targetHeight = 126; // altura total (igual ao FXML)
         Timeline expand = new Timeline(
                 new KeyFrame(Duration.millis(350),
                         new KeyValue(submenu.prefHeightProperty(), targetHeight, Interpolator.LINEAR))
@@ -77,7 +83,7 @@ public class Menu {
         expand.play();
     }
 
-    private void collapseSubmenu() {
+    private void collapseSubmenu(VBox submenu) {
         Timeline collapse = new Timeline(
                 new KeyFrame(Duration.millis(350),
                         new KeyValue(submenu.prefHeightProperty(), 0, Interpolator.LINEAR))
@@ -93,7 +99,7 @@ public class Menu {
 
     @FXML
     void menuClick(MouseEvent event) throws IOException {
-        if (menuisOpen) {
+        if (menuIsOpen) {
             TranslateTransition menuClose = new TranslateTransition(Duration.millis(350), sideMenu);
             menuClose.setToX(-210);
             menuClose.setToY(0);
@@ -112,7 +118,7 @@ public class Menu {
             menuButtonClose.setInterpolator(Interpolator.LINEAR);
             menuButtonClose.play();
 
-            menuisOpen = false;
+            menuIsOpen = false;
         } else {
             TranslateTransition menuOpen = new TranslateTransition(Duration.millis(350), sideMenu);
             menuOpen.setToX(0);
@@ -132,7 +138,7 @@ public class Menu {
             menuButtonOpen.setInterpolator(Interpolator.LINEAR);
             menuButtonOpen.play();
 
-            menuisOpen = true;
+            menuIsOpen = true;
         }
     }
 

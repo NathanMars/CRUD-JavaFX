@@ -24,7 +24,7 @@
                         <Image url="@../../assets/login-background.jpg" />
                      </image>
                   </ImageView>
-                  <Text layoutX="55.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblioteca" textAlignment="CENTER" wrappingWidth="128.0">
+                  <Text layoutX="55.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CyberSyn" textAlignment="CENTER" wrappingWidth="128.0">
                      <font>
                         <Font name="Segoe UI Bold" size="25.0" />
                      </font>
@@ -39,7 +39,7 @@
                   <Insets bottom="3.0" />
                </VBox.margin>
             </JFXButton>
-            <VBox fx:id="submenu" alignment="TOP_CENTER" prefHeight="126.0" prefWidth="205.0">
+            <VBox fx:id="submenuRegistrater" alignment="TOP_CENTER" prefHeight="126.0" prefWidth="205.0">
                <children>
                   <JFXButton fx:id="registerUserButton" onAction="#registerUserButtonClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Usuários">
                      <VBox.margin>
@@ -58,7 +58,7 @@
                   </JFXButton>
                </children>
             </VBox>
-            <JFXButton fx:id="regsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../Styles/stylesheet.css" text="Cadastros">
+            <JFXButton fx:id="registrationsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../Styles/stylesheet.css" text="Cadastros">
                <font>
                   <Font name="Yu Gothic UI Regular" size="16.0" />
                </font>
@@ -66,6 +66,25 @@
                   <Insets bottom="3.0" />
                </VBox.margin>
             </JFXButton>
+            <VBox fx:id="submenuRegistrations" alignment="TOP_CENTER" prefHeight="126.0" prefWidth="205.0">
+               <children>
+                  <JFXButton fx:id="userRegistrations" onAction="#registerUserButtonClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Usuários">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Eventos">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="AdminRegistrations" onAction="#registerAdminClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Administradores">
+                     <VBox.margin>
+                        <Insets bottom="4.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
             <JFXButton fx:id="reportsButton" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" stylesheets="@../../Styles/stylesheet.css" text="Relatórios">
                <font>
                   <Font name="Yu Gothic UI Regular" size="16.0" />
