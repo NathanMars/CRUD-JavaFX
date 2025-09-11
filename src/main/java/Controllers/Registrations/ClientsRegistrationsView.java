@@ -75,7 +75,6 @@ public class ClientsRegistrationsView {
         emailField.setText(Client.getEmail());
         phoneField.setText(Client.getPhone());
         addressField.setText(Client.getAddress());
-        activeField.setSelected(Client.isActive());
 
         // Habilita campos para edição
         enableFields(true);

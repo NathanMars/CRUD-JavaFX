@@ -19,8 +19,7 @@ public class ClientDAO {
         }
     }
 
-    public Client insertClient(String name, String cpf, String email, String phone, String address
-            , LocalDate birthDate, boolean active) {
+    public Client insertClient(String name, String cpf, String email, String phone, String address, LocalDate birthDate, String type) {
 
         Transaction transaction = null;
         Client Client = new Client();
@@ -33,7 +32,7 @@ public class ClientDAO {
             Client.setPhone(phone);
             Client.setCpf(cpf);
             Client.setBirthdate(birthDate);
-            Client.setActive(active);
+            Client.setType(type);
             Client.setAddress(address);
 
             session.persist(Client);

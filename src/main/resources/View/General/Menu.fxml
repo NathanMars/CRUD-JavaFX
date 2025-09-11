@@ -41,7 +41,7 @@
             </JFXButton>
             <VBox fx:id="submenuRegistrater" alignment="TOP_CENTER" prefHeight="126.0" prefWidth="205.0">
                <children>
-                  <JFXButton fx:id="registerUserButton" onAction="#registerUserButtonClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Usuários">
+                  <JFXButton fx:id="registerClient" onAction="#registerClientClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Usuários">
                      <VBox.margin>
                         <Insets bottom="2.0" top="2.0" />
                      </VBox.margin>
@@ -51,7 +51,7 @@
                         <Insets bottom="2.0" top="2.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="registerAdmin" onAction="#registerAdminClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Administradores">
+                  <JFXButton fx:id="registerUser" onAction="#registerUserClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Useristradores">
                      <VBox.margin>
                         <Insets bottom="4.0" top="2.0" />
                      </VBox.margin>
@@ -68,7 +68,7 @@
             </JFXButton>
             <VBox fx:id="submenuRegistrations" alignment="TOP_CENTER" prefHeight="126.0" prefWidth="205.0">
                <children>
-                  <JFXButton fx:id="userRegistrations" onAction="#registerUserButtonClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Usuários">
+                  <JFXButton fx:id="clientsRegistrations" onAction="#clientRegistrationsClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Clientes">
                      <VBox.margin>
                         <Insets bottom="2.0" top="2.0" />
                      </VBox.margin>
@@ -78,7 +78,7 @@
                         <Insets bottom="2.0" top="2.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="AdminRegistrations" onAction="#registerAdminClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Administradores">
+                  <JFXButton fx:id="userRegistrations" onAction="#userRegistrationsClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Usuários">
                      <VBox.margin>
                         <Insets bottom="4.0" top="2.0" />
                      </VBox.margin>

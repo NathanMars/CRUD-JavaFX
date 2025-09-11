@@ -177,12 +177,22 @@ public class Menu {
 
     // Comportamento dos botões
     @FXML
-    void registerUserButtonClick(ActionEvent event) {
+    void registerClientClick(ActionEvent event) {
         loadContent("/View/Register/registerClient.fxml");
     }
 
     @FXML
-    void registerAdminClick(ActionEvent event) {
+    void registerUserClick(ActionEvent event) {
+        loadContent("/View/Register/registerUser.fxml");
+    }
+
+    @FXML
+    void clientRegistrationsClick(ActionEvent event) {
+        loadContent("/View/Register/registerClient.fxml");
+    }
+
+    @FXML
+    void userRegistrationsClick(ActionEvent event) {
         loadContent("/View/Register/registerUser.fxml");
     }
 

@@ -11,11 +11,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <JFXButton layoutX="752.0" layoutY="628.0" prefHeight="36.0" prefWidth="172.0" styleClass="jfx-button" stylesheets="@../../Styles/stylesheet.css" text="Salvar">
+      <JFXButton fx:id="saveBtn" layoutX="752.0" layoutY="628.0" prefHeight="36.0" prefWidth="172.0" styleClass="jfx-button" stylesheets="@../../Styles/stylesheet.css" text="Salvar">
          <font>
             <Font name="Yu Gothic UI Regular" size="18.0" />
          </font></JFXButton>
-      <TextField layoutX="431.0" layoutY="282.0" prefHeight="36.0" prefWidth="350.0">
+      <TextField fx:id="nameField" layoutX="431.0" layoutY="282.0" prefHeight="36.0" prefWidth="350.0">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -24,7 +24,7 @@
             <Font name="Yu Gothic UI Regular" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="431.0" layoutY="356.0" prefHeight="36.0" prefWidth="350.0" promptText="___.___.___-__">
+      <TextField fx:id="cpfField" layoutX="431.0" layoutY="356.0" prefHeight="36.0" prefWidth="350.0" promptText="___.___.___-__">
          <font>
             <Font name="Yu Gothic UI Regular" size="14.0" />
          </font></TextField>
@@ -33,7 +33,7 @@
             <Font name="Yu Gothic UI Regular" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="431.0" layoutY="433.0" prefHeight="36.0" prefWidth="350.0">
+      <TextField fx:id="roleField" layoutX="431.0" layoutY="433.0" prefHeight="36.0" prefWidth="350.0">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -47,17 +47,17 @@
             <Font name="Yu Gothic UI Regular" size="18.0" />
          </font>
       </Label>
-      <ComboBox layoutX="433.0" layoutY="511.0" prefHeight="36.0" prefWidth="117.0" promptText="Selecione" />
+      <ComboBox fx:id="accessCbx" layoutX="433.0" layoutY="511.0" prefHeight="36.0" prefWidth="117.0" promptText="Selecione" />
       <Label alignment="CENTER" layoutX="520.0" layoutY="35.0" prefHeight="35.0" prefWidth="464.0" text="CADASTRAR USUÁRIOS">
          <font>
             <Font name="Yu Gothic UI Bold" size="24.0" />
          </font>
       </Label>
-      <JFXButton layoutX="567.0" layoutY="628.0" prefHeight="36.0" prefWidth="172.0" styleClass="jfx-button" stylesheets="@../../Styles/stylesheet.css" text="Limpar">
+      <JFXButton fx:id="clearBtn" layoutX="567.0" layoutY="628.0" prefHeight="36.0" prefWidth="172.0" styleClass="jfx-button" stylesheets="@../../Styles/stylesheet.css" text="Limpar">
          <font>
             <Font name="Yu Gothic UI Regular" size="18.0" />
          </font></JFXButton>
-      <TextField layoutX="431.0" layoutY="133.0" prefHeight="36.0" prefWidth="350.0">
+      <TextField fx:id="usernameField" layoutX="431.0" layoutY="133.0" prefHeight="36.0" prefWidth="350.0">
          <font>
             <Font name="Yu Gothic UI Regular" size="14.0" />
          </font></TextField>
@@ -71,11 +71,11 @@
             <Font name="Yu Gothic UI Regular" size="18.0" />
          </font>
       </Label>
-      <PasswordField layoutX="431.0" layoutY="211.0" prefHeight="36.0" prefWidth="350.0">
+      <PasswordField fx:id="passwordField" layoutX="431.0" layoutY="211.0" prefHeight="36.0" prefWidth="350.0">
          <font>
             <Font name="Yu Gothic UI Regular" size="14.0" />
          </font></PasswordField>
-      <CheckBox layoutX="615.0" layoutY="514.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Ativo">
+      <CheckBox fx:id="activeCheck" layoutX="615.0" layoutY="514.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Ativo">
          <font>
             <Font name="Yu Gothic UI Regular" size="18.0" />
          </font>

@@ -50,10 +50,10 @@ public class Client {
     private String address;
 
     @Column(
-            name = "\"ATIVO\"",
+            name = "\"TIPO\"",
             nullable = false
     )
-    private boolean active;
+    private String type;
 
     @Column(
             name = "\"NASCIMENTO\""
@@ -116,11 +116,11 @@ public class Client {
         this.birthdate = birthdate;
     }
 
-    public boolean isActive() {
-        return active;
+    public String getType() {
+        return type;
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setType(String type) {
+        this.type = type;
     }
 }
