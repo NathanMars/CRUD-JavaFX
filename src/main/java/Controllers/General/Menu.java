@@ -64,39 +64,7 @@ public class Menu {
         });
     }
 
-    private void toggleSubmenu(VBox submenu, double targetHeight) {
-        if (submenu.isVisible()) {
-            collapseSubmenu(submenu);
-        } else {
-            expandSubmenu(submenu, targetHeight);
-        }
-    }
-
-    private void expandSubmenu(VBox submenu, double targetHeight) {
-        submenu.setVisible(true);
-        submenu.setManaged(true);
-
-        Timeline expand = new Timeline(
-                new KeyFrame(Duration.millis(350),
-                        new KeyValue(submenu.prefHeightProperty(), targetHeight, Interpolator.LINEAR))
-        );
-        expand.play();
-    }
-
-    private void collapseSubmenu(VBox submenu) {
-        Timeline collapse = new Timeline(
-                new KeyFrame(Duration.millis(350),
-                        new KeyValue(submenu.prefHeightProperty(), 0, Interpolator.LINEAR))
-        );
-
-        collapse.setOnFinished(e -> {
-            submenu.setVisible(false);
-            submenu.setManaged(false);
-        });
-
-        collapse.play();
-    }
-
+    // Comportamento do menu lateral
     @FXML
     void menuClick(MouseEvent event) throws IOException {
         if (menuIsOpen) {
@@ -173,6 +141,41 @@ public class Menu {
         menuButton.setOnMouseExited(onExit);
     }
 
+    // Comportamento dos submenus colapsaveis
+    private void toggleSubmenu(VBox submenu, double targetHeight) {
+        if (submenu.isVisible()) {
+            collapseSubmenu(submenu);
+        } else {
+            expandSubmenu(submenu, targetHeight);
+        }
+    }
+
+    private void expandSubmenu(VBox submenu, double targetHeight) {
+        submenu.setVisible(true);
+        submenu.setManaged(true);
+
+        Timeline expand = new Timeline(
+                new KeyFrame(Duration.millis(350),
+                        new KeyValue(submenu.prefHeightProperty(), targetHeight, Interpolator.LINEAR))
+        );
+        expand.play();
+    }
+
+    private void collapseSubmenu(VBox submenu) {
+        Timeline collapse = new Timeline(
+                new KeyFrame(Duration.millis(350),
+                        new KeyValue(submenu.prefHeightProperty(), 0, Interpolator.LINEAR))
+        );
+
+        collapse.setOnFinished(e -> {
+            submenu.setVisible(false);
+            submenu.setManaged(false);
+        });
+
+        collapse.play();
+    }
+
+    // Comportamento dos botões
     @FXML
     void registerUserButtonClick(ActionEvent event) {
         loadContent("/View/Register/registerClient.fxml");
