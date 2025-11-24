@@ -16,6 +16,7 @@ module Application.crud {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires jbcrypt;
+    requires org.flywaydb.core;
 
     opens Application to javafx.fxml;
     opens Controllers.General to javafx.fxml;

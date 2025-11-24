@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Register.RegisterProduct">
+   <children>
+      <Label alignment="CENTER" layoutX="268.0" layoutY="37.0" prefHeight="35.0" prefWidth="464.0" text="CADASTRAR PRODUTOS">
+         <font>
+            <Font name="Yu Gothic UI Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="120.0" text="Nome">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="325.0" layoutY="147.0" prefHeight="36.0" prefWidth="350.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="325.0" layoutY="200.0" text="Preço">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="priceField" layoutX="325.0" layoutY="227.0" prefHeight="36.0" prefWidth="350.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="325.0" layoutY="280.0" text="Quantidade">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="quantityField" layoutX="325.0" layoutY="307.0" prefHeight="36.0" prefWidth="350.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="325.0" layoutY="360.0" text="Descrição">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="descriptionField" layoutX="325.0" layoutY="387.0" prefHeight="100.0" prefWidth="350.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <CheckBox fx:id="activeCheck" layoutX="325.0" layoutY="510.0" mnemonicParsing="false" text="Ativo">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="18.0" />
+         </font>
+      </CheckBox>
+      <JFXButton fx:id="saveBtn" layoutX="600.0" layoutY="600.0" prefHeight="36.0" prefWidth="150.0" styleClass="jfx-button" stylesheets="@../../Styles/stylesheet.css" text="Salvar">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clearBtn" layoutX="250.0" layoutY="600.0" prefHeight="36.0" prefWidth="150.0" styleClass="jfx-button" stylesheets="@../../Styles/stylesheet.css" text="Limpar">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

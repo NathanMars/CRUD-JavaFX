@@ -8,7 +8,18 @@ public class HibernateCon {
 
     private static SessionFactory buildSessionFactory() {
         try {
-            return (new Configuration()).configure().buildSessionFactory();
+            Configuration configuration = new Configuration().configure();
+
+            // Run Flyway migration
+            org.flywaydb.core.Flyway flyway = org.flywaydb.core.Flyway.configure()
+                    .dataSource(
+                            configuration.getProperty("hibernate.connection.url"),
+                            configuration.getProperty("hibernate.connection.username"),
+                            configuration.getProperty("hibernate.connection.password"))
+                    .load();
+            flyway.migrate();
+
+            return configuration.buildSessionFactory();
         } catch (Throwable ex) {
             System.err.println("Falha na criação de uma conexão com o banco de dados.");
             throw new ExceptionInInitializerError(ex);

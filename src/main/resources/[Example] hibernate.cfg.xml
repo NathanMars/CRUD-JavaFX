@@ -13,7 +13,7 @@
         <property name="hibernate.connection.password"></property>
 
         <!-- Dialeto para PostgreSQL -->
-        <property name="hibernate.dialect"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
 
         <!-- Mostrar as queries no console -->
         <property name="hibernate.show_sql">true</property>
@@ -25,6 +25,8 @@
         <!-- Mapeamento de entidades -->
         <mapping class="Model.Entity.User"/>
         <mapping class="Model.Entity.Client"/>
+        <mapping class="Model.Entity.Product"/>
+        <mapping class="Model.Entity.Purchase"/>
 
     </session-factory>
 </hibernate-configuration>

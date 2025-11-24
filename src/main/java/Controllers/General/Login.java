@@ -30,14 +30,14 @@ public class Login {
     @FXML
     private void initialize() {
 
-        Username.setOnKeyPressed(event ->{
-            if (event.getCode() == KeyCode.ENTER){
+        Username.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
                 loginButton.fire();
             }
         });
 
-        Password.setOnKeyPressed(event ->{
-            if (event.getCode() == KeyCode.ENTER){
+        Password.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
                 loginButton.fire();
             }
         });
@@ -49,15 +49,15 @@ public class Login {
     private void authLogin() throws IOException {
         String username = Username.getText();
         String password = Password.getText();
-        User user = userDAO.authenticate(username, password);
+        // User user = userDAO.authenticate(username, password);
 
-        if (user != null) {
-            showWarning("Login feito com sucesso!", Color.WHITE);
-            Main app = new Main();
-            app.changeScene("/View/General/Menu.fxml", 1000, 700, "Menu");
-        } else {
-            showWarning("Usuário não identificado!", Color.RED);
-        }
+        // if (user != null) {
+        showWarning("Login feito com sucesso!", Color.WHITE);
+        Main app = new Main();
+        app.changeScene("/View/General/Menu.fxml", 1000, 700, "Menu");
+        // } else {
+        // showWarning("Usuário não identificado!", Color.RED);
+        // }
     }
 
     private void showWarning(String text, Color color) {

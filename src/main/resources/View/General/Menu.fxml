@@ -39,19 +39,24 @@
                   <Insets bottom="3.0" />
                </VBox.margin>
             </JFXButton>
-            <VBox fx:id="submenuRegistrater" alignment="TOP_CENTER" prefHeight="126.0" prefWidth="205.0">
+            <VBox fx:id="submenuRegister" alignment="TOP_CENTER" prefHeight="170.0" prefWidth="205.0">
                <children>
                   <JFXButton fx:id="registerClient" onAction="#registerClientClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Usuários">
                      <VBox.margin>
                         <Insets bottom="2.0" top="2.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Eventos">
+                  <JFXButton fx:id="registerProduct" onAction="#registerProductClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Produtos">
                      <VBox.margin>
                         <Insets bottom="2.0" top="2.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="registerUser" onAction="#registerUserClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Useristradores">
+                  <JFXButton fx:id="registerPurchase" onAction="#registerPurchaseClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Compras">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="registerUser" onAction="#registerUserClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Administradores">
                      <VBox.margin>
                         <Insets bottom="4.0" top="2.0" />
                      </VBox.margin>
@@ -66,14 +71,19 @@
                   <Insets bottom="3.0" />
                </VBox.margin>
             </JFXButton>
-            <VBox fx:id="submenuRegistrations" alignment="TOP_CENTER" prefHeight="126.0" prefWidth="205.0">
+            <VBox fx:id="submenuRegistrations" alignment="TOP_CENTER" prefHeight="170.0" prefWidth="205.0">
                <children>
                   <JFXButton fx:id="clientsRegistrations" onAction="#clientRegistrationsClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Clientes">
                      <VBox.margin>
                         <Insets bottom="2.0" top="2.0" />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Eventos">
+                  <JFXButton fx:id="productsRegistrations" onAction="#productsRegistrationsClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Produtos">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="purchasesRegistrations" onAction="#purchasesRegistrationsClick" prefHeight="35.0" prefWidth="195.0" styleClass="submenu-button" stylesheets="@../../Styles/stylesheet.css" text="Compras">
                      <VBox.margin>
                         <Insets bottom="2.0" top="2.0" />
                      </VBox.margin>

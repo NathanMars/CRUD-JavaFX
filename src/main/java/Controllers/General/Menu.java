@@ -20,7 +20,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
-
 public class Menu {
     @FXML
     private JFXHamburger menuButton;
@@ -46,6 +45,18 @@ public class Menu {
     @FXML
     private JFXButton registrationsButton;
 
+    @FXML
+    private JFXButton registerProduct;
+
+    @FXML
+    private JFXButton registerPurchase;
+
+    @FXML
+    private JFXButton productsRegistrations;
+
+    @FXML
+    private JFXButton purchasesRegistrations;
+
     private Boolean menuIsOpen = true;
 
     @FXML
@@ -56,8 +67,8 @@ public class Menu {
         submenuRegister.setManaged(false);
         submenuRegister.setPrefHeight(0);
 
-        registerButton.setOnAction(e -> toggleSubmenu(submenuRegister, 126));
-        registrationsButton.setOnAction(e -> toggleSubmenu(submenuRegistrations, 126));
+        registerButton.setOnAction(e -> toggleSubmenu(submenuRegister, 170));
+        registrationsButton.setOnAction(e -> toggleSubmenu(submenuRegistrations, 170));
 
         javafx.application.Platform.runLater(() -> {
             contentPane.requestFocus();
@@ -156,16 +167,14 @@ public class Menu {
 
         Timeline expand = new Timeline(
                 new KeyFrame(Duration.millis(350),
-                        new KeyValue(submenu.prefHeightProperty(), targetHeight, Interpolator.LINEAR))
-        );
+                        new KeyValue(submenu.prefHeightProperty(), targetHeight, Interpolator.LINEAR)));
         expand.play();
     }
 
     private void collapseSubmenu(VBox submenu) {
         Timeline collapse = new Timeline(
                 new KeyFrame(Duration.millis(350),
-                        new KeyValue(submenu.prefHeightProperty(), 0, Interpolator.LINEAR))
-        );
+                        new KeyValue(submenu.prefHeightProperty(), 0, Interpolator.LINEAR)));
 
         collapse.setOnFinished(e -> {
             submenu.setVisible(false);
@@ -194,6 +203,26 @@ public class Menu {
     @FXML
     void userRegistrationsClick(ActionEvent event) {
         loadContent("/View/Register/registerUser.fxml");
+    }
+
+    @FXML
+    void registerProductClick(ActionEvent event) {
+        loadContent("/View/Register/registerProduct.fxml");
+    }
+
+    @FXML
+    void registerPurchaseClick(ActionEvent event) {
+        loadContent("/View/Register/registerPurchase.fxml");
+    }
+
+    @FXML
+    void productsRegistrationsClick(ActionEvent event) {
+        loadContent("/View/Registrations/FrmProductsRegistrations.fxml");
+    }
+
+    @FXML
+    void purchasesRegistrationsClick(ActionEvent event) {
+        loadContent("/View/Registrations/FrmPurchasesRegistrations.fxml");
     }
 
     public void userLogout(ActionEvent event) throws IOException {
